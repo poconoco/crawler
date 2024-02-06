@@ -114,19 +114,19 @@ void applyState(State newState) {
   currentState = newState;
   switch(currentState) {
     case FORWARD:
-//      Serial.print("FORWARD");
+ //     Serial.print("FORWARD\n");
       leftMotor.write(90 + FORWARD_SPEED_L); 
       rightMotor.write(90 - FORWARD_SPEED_R); 
       break;
 
     case SEARCHING_RIGHT:
-//      Serial.print(">>");
+//      Serial.print(">>\n");
       leftMotor.write(90 + TURN_SPEED); 
       rightMotor.write(90 + TURN_SPEED); 
       break;
 
     case SEARCHING_LEFT:
-//      Serial.print("<<");
+//      Serial.print("<<\n");
       leftMotor.write(90 - TURN_SPEED); 
       rightMotor.write(90 - TURN_SPEED); 
       break;
